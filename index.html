@@ -61,27 +61,22 @@
             margin-top: 40px;
         }
 
-        /* --- Riquadro Messe fisso a destra --- */
+  /* --- Riquadro Messe fisso, allineato al contenitore --- */
+    .orari-fissi {
+    position: fixed;
+    top: 120px;
 
-        .orari-fissi {
-            position: fixed;
-            right: 20px;
-            top: 120px;
-            width: 230px;
-            background: white;
-            border: 2px solid #c8b39a;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
+    /* magia: allinea a destra del container da 900px */
+    right: calc(50% - 900px/2 - 250px);
 
-        .orari-fissi h3 {
-            margin-top: 0;
-            color: #7a5c3d;
-            border-bottom: 2px solid #7a5c3d;
-            padding-bottom: 4px;
-        }
+    width: 230px;
+    background: white;
+    border: 2px solid #c8b39a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
 
         /* Per evitare sovrapposizioni sugli schermi piccoli */
         @media (max-width: 900px) {
@@ -150,3 +145,4 @@
 
 </body>
 </html>
+
