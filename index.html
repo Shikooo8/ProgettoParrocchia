@@ -12,28 +12,33 @@
             background: #f2e9d8;
             color: #4d3a2a;
         }
+
         header {
             background: #7a5c3d;
             color: white;
             padding: 25px;
             text-align: center;
         }
+
         nav {
             background: #c8b39a;
             padding: 12px;
             text-align: center;
         }
+
         nav a {
             color: #4d3a2a;
             text-decoration: none;
             font-weight: bold;
             margin: 0 15px;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
+
         .box {
             background: white;
             border: 2px solid #c8b39a;
@@ -41,11 +46,13 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+
         h2 {
             border-bottom: 2px solid #7a5c3d;
             padding-bottom: 5px;
             color: #7a5c3d;
         }
+
         footer {
             background: #7a5c3d;
             color: white;
@@ -53,6 +60,38 @@
             padding: 15px;
             margin-top: 40px;
         }
+
+        /* --- Riquadro Messe fisso a destra --- */
+
+        .orari-fissi {
+            position: fixed;
+            right: 20px;
+            top: 120px;
+            width: 230px;
+            background: white;
+            border: 2px solid #c8b39a;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .orari-fissi h3 {
+            margin-top: 0;
+            color: #7a5c3d;
+            border-bottom: 2px solid #7a5c3d;
+            padding-bottom: 4px;
+        }
+
+        /* Per evitare sovrapposizioni sugli schermi piccoli */
+        @media (max-width: 900px) {
+            .orari-fissi {
+                position: static;
+                width: auto;
+                margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -69,6 +108,15 @@
     <a href="contatti.html">Contatti</a>
 </nav>
 
+<!-- Riquadro fisso a destra -->
+<div class="orari-fissi">
+    <h3>Orari Messe</h3>
+    <strong>Feriali:</strong><br>
+    <em><!-- Inserisci orari feriali --></em><br><br>
+    <strong>Festivi:</strong><br>
+    9:00 – 10:00 – 11:30 – 18:00
+</div>
+
 <div class="container">
 
     <h2>Ultimi Avvisi</h2>
@@ -76,13 +124,22 @@
         Torna il giornale della parrocchia!
     </div>
 
-    <h2>Orari delle Messe</h2>
+    <h2>La Parrocchia</h2>
     <div class="box">
-        <strong>Feriali:</strong> <br>
-        <em><!-- Inserisci eventuali nuovi orari feriali --></em><br><br>
+        <p>Benvenuti nella Parrocchia della Trasfigurazione.</p>
+        <p><!-- Qui puoi inserire testo sulla storia, attività, gruppi ecc. --></p>
+    </div>
 
-        <strong>Festivi:</strong><br>
-        9:00 – 10:00 – 11:30 – 18:00
+    <h2>Contatti</h2>
+    <div class="box">
+        <strong>Indirizzo:</strong><br>
+        Piazza della Trasfigurazione 2, Roma<br><br>
+
+        <strong>Telefono:</strong><br>
+        06 537 3844<br><br>
+
+        <strong>Email:</strong><br>
+        <em>...</em>
     </div>
 
 </div>
