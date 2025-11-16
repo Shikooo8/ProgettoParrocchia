@@ -3,106 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parrocchia della Trasfigurazione</title>
+    <title>Parrocchia della Trasfigurazione – Home</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f5f7fa;
             margin: 0;
-            padding: 0;
-            color: #333;
+            background: #f2e9d8;
+            color: #4d3a2a;
         }
 
         header {
-            background: #4a76a8;
+            background: url('immagini/foto4.jpg') center/cover no-repeat;
             color: white;
-            padding: 30px 20px;
+            padding: 50px;
             text-align: center;
         }
 
-        section {
+        nav {
+            background: #c8b39a;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #4d3a2a;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        .container {
             max-width: 900px;
-            margin: 25px auto;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* --- DUE COLONNE --- */
+        .two-columns {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .col-left {
+            flex: 2;
+        }
+
+        .col-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
             background: white;
+            border: 2px solid #c8b39a;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #4a76a8;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #4a76a8;
-            color: white;
             margin-top: 20px;
         }
 
-        /* Contenitore affiancato per Avvisi e Orari Messe */
-        .contenitore-duale {
+        h2 {
+            border-bottom: 2px solid #7a5c3d;
+            padding-bottom: 5px;
+            color: #7a5c3d;
+        }
+
+        footer {
+            background: #7a5c3d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        /* --- GALLERIA FOOTER --- */
+        .footer-gallery {
             display: flex;
-            gap: 20px; /* distanza tra i due riquadri */
-            justify-content: flex-start;
-            max-width: 900px;
-            margin: 25px auto;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
-        .contenitore-duale > div {
+        .footer-gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 3px solid #7a5c3d;
+            border-radius: 8px;
+        }
+
+        /* --- CALENDARIO --- */
+        .calendario {
+            width: 120px;
             background: white;
-            padding: 20px;
+            border: 2px solid #c8b39a;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+            color: #4d3a2a;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
         }
 
-        .avvisi {
-            flex: 2; /* occupa più spazio */
+        #giorno {
+            font-size: 40px;
+            font-weight: bold;
+            color: #7a5c3d;
         }
 
-        .orari-fissi {
-            flex: 1; /* occupa meno spazio */
+        #mese {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        #anno {
+            font-size: 16px;
+            color: #7a5c3d;
+            margin-top: 3px;
+        }
+
+        .foto-verticale {
+            width: 100%;
+            border: 2px solid #c8b39a;
+            border-radius: 10px;
         }
 
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Parrocchia della Trasfigurazione</h1>
-        <p>Benvenuti nella nostra comunità!</p>
-    </header>
+<header>
+    <h1>Parrocchia della Trasfigurazione</h1>
+    <p>Benvenuti nella nostra comunità!</p>
+</header>
 
-    <!-- Sezione Avvisi e Orari Messe affiancati -->
-    <section class="contenitore-duale">
-        <div class="avvisi">
-            <h2>Avvisi Parrocchiali</h2>
-            <p><em>Torna il giornale della parrocchia!</em></p>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="parrocchia.html">Parrocchia</a>
+    <a href="avvisi.html">Avvisi</a>
+    <a href="contatti.html">Contatti</a>
+</nav>
+
+<div class="container two-columns">
+
+    <!-- COLONNA SINISTRA -->
+    <div class="col-left">
+        <h2>Ultimi Avvisi</h2>
+        <div class="box">
+            Torna il giornale della parrocchia!
         </div>
 
-        <div class="orari-fissi">
-            <h2>Orari delle Messe</h2>
-            <p><em>Feriali: ...</em></p>
-            <p><em>Festivi: 9:00 ; 10:00 ; 11:30 ; 18:00</em></p>
+        <h2>Orari delle Messe</h2>
+        <div class="box">
+            <strong>Feriali:</strong> <br>
+            <em><!-- Inserisci eventuali nuovi orari feriali --></em><br><br>
+
+            <strong>Festivi:</strong><br>
+            9:00 – 10:00 – 11:30 – 18:00
         </div>
-    </section>
 
-    <!-- Sezioni rimanenti -->
-    <section>
-        <h2>Indirizzo</h2>
-        <p><em>Piazza della Trasfigurazione 2, Roma</em></p>
-    </section>
+        <h2>Informazioni di contatto</h2>
+        <div class="box">
+            <strong>Indirizzo:</strong><br>
+            Piazza della Trasfigurazione 2, Roma<br><br>
 
-    <section>
-        <h2>Contatti</h2>
-        <p><strong>Telefono:</strong> <em>06 537 3844</em></p>
-        <p><strong>Email:</strong> <em>info@parrocchiatrasfigurazione.it</em></p>
-    </section>
+            <strong>Telefono:</strong><br>
+            06 537 3844<br><br>
 
-    <footer>
-        &copy; 2025 Parrocchia della Trasfigurazione
-    </footer>
+            <strong>Email:</strong><br>
+            <em>...</em>
+        </div>
+    </div>
+
+    <!-- COLONNA DESTRA -->
+    <div class="col-right">
+
+        <!-- CALENDARIO -->
+        <div class="calendario">
+            <div id="giorno"></div>
+            <div id="mese"></div>
+            <div id="anno"></div>
+        </div>
+
+        
+
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-gallery">
+        <img src="immagini/foto1.jpg" alt="foto 1">
+        <img src="immagini/foto2.jpg" alt="foto 2">
+        <img src="immagini/foto3.jpg" alt="foto 3">
+    </div>
+    © 2025 Parrocchia della Trasfigurazione
+</footer>
+
+<!-- SCRIPT CALENDARIO -->
+<script>
+    const data = new Date();
+
+    const mesi = [
+        "Gennaio","Febbraio","Marzo","Aprile",
+        "Maggio","Giugno","Luglio","Agosto",
+        "Settembre","Ottobre","Novembre","Dicembre"
+    ];
+
+    document.getElementById("giorno").textContent = data.getDate();
+    document.getElementById("mese").textContent = mesi[data.getMonth()];
+    document.getElementById("anno").textContent = data.getFullYear();
+</script>
 
 </body>
 </html>
